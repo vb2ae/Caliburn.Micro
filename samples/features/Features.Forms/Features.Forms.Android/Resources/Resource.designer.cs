@@ -14,7 +14,11 @@ namespace Features.Forms.Droid
 {
 	
 	
+<<<<<<< HEAD
 	[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Xamarin.Android.Build.Tasks", "12.1.0.11")]
+=======
+	[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Xamarin.Android.Build.Tasks", "1.0.0.0")]
+>>>>>>> 156ef5b (Updated features sample to the new format)
 	public partial class Resource
 	{
 		

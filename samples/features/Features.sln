@@ -18,8 +18,11 @@ EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Features.Forms.Android", "Features.Forms\Features.Forms.Android\Features.Forms.Android.csproj", "{C22C023A-6B52-4FE3-B98A-57F973D56D4B}"
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Features.NetCore", "Features.NetCore\Features.NetCore.csproj", "{BB2E4A7A-B6D2-4179-8C75-3FD993E9E7A9}"
+<<<<<<< HEAD
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Features.NetFive", "Features.NetFive\Features.NetFive.csproj", "{E080007B-0470-4FBE-A01C-79AEAD3F9DBE}"
+=======
+>>>>>>> 156ef5b (Updated features sample to the new format)
 EndProject
 Global
 	GlobalSection(SharedMSBuildProjectFiles) = preSolution
