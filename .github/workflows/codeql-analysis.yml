@@ -65,7 +65,7 @@ jobs:
       run:  msbuild src\caliburn.micro.sln -t:restore
 
     - name: Build app for release
-      run: msbuild src\caliburn.micro.sln /t:Build /p:JavaSdkDirectory="$(JAVA_HOME_11_X64)
+      run: msbuild src\caliburn.micro.sln /t:Build /p:JavaSdkDirectory="$(JAVA_HOME_11_X64)"
 
     # ℹ️ Command-line programs to run using the OS shell.
     # 📚 https://git.io/JvXDl
