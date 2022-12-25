@@ -43,10 +43,6 @@ jobs:
       with:
         distribution: 'microsoft'
         java-version: '11'
-    - name: restore workloads
-      run: dotnet workload restore src/caliburn.micro.sln
-    - name: install workload maui-windows
-      run: dotnet workload install maui-windows
       
     - name: Setup NuGet.exe for use with actions
         # You may pin to the exact commit or the version.
@@ -54,6 +50,14 @@ jobs:
       uses: NuGet/setup-nuget@v1.1.1
     - name: Add msbuild to PATH
       uses: microsoft/setup-msbuild@v1.1
+      
+    - name: search workloads
+      run: dotnet workload search
+    - name: restore workloads
+      run: dotnet workload restore src/caliburn.micro.sln
+    - name: list workloads
+      run: dotnet workload list
+
     - name: Restore nuget packages
       run:  msbuild src\caliburn.micro.sln -t:restore
 
