@@ -54,7 +54,7 @@ jobs:
     - name: search workloads
       run: dotnet workload search
     - name: restore workloads
-      run: dotnet workload restore src/caliburn.micro.sln
+      run: dotnet workload restore src/caliburn.micro.sln  --add-source https://api.nuget.org/v3/index.json
     - name: list workloads
       run: dotnet workload list
 
