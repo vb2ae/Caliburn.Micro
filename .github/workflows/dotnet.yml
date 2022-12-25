@@ -1,10 +1,5 @@
 name: .NET
-variables:
-  buildConfiguration: Release
-  buildPlatform: Any CPU
-  coreSolution: 'src\Caliburn.Micro.sln'
-  setupSamplesSolution: 'samples\setup\Setup.sln'
-  featuresSamplesSolution: 'samples\features\Features.sln'
+
   
 on:
   push:
