@@ -46,8 +46,7 @@ jobs:
 
     - name: Install MAUI Workloads
       run: |
-        dotnet workload install android --ignore-failed-sources
-        dotnet workload install maui --ignore-failed-sources    
+        dotnet workload install maui maui-android maui-ios maui-maccatalyst maui-windows android --ignore-failed-sources    
     - name: Restore dependencies
       run: dotnet restore src/caliburn.micro.sln -
     - name: Build
