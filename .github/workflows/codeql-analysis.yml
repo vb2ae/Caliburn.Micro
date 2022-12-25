@@ -43,7 +43,8 @@ jobs:
       with:
         distribution: 'microsoft'
         java-version: '11'
-
+    - name: restore workloads
+      run: dotnet workload restore src/caliburn.micro.sln
 
     - name: Setup NuGet.exe for use with actions
         # You may pin to the exact commit or the version.
