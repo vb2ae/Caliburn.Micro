@@ -45,7 +45,9 @@ jobs:
         java-version: '11'
     - name: restore workloads
       run: dotnet workload restore src/caliburn.micro.sln
-
+    - name: install workload maui-windows
+      run: dotnet workload install maui-windows
+      
     - name: Setup NuGet.exe for use with actions
         # You may pin to the exact commit or the version.
         # uses: NuGet/setup-nuget@fd9fffd6ca4541cf4152a9565835ca1a88a6eb37
