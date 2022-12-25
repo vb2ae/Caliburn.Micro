@@ -38,7 +38,7 @@ jobs:
     - name: Setup .NET
       uses: actions/setup-dotnet@v3
       with:
-        dotnet-version: 6.0.x
+        global-json-file: "./global.json" # contains version 2.2.207
     - uses: actions/setup-java@v2
       with:
         distribution: 'microsoft'
