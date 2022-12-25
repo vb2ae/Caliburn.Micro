@@ -49,13 +49,14 @@ jobs:
         # You may pin to the exact commit or the version.
         # uses: NuGet/setup-nuget@fd9fffd6ca4541cf4152a9565835ca1a88a6eb37
       uses: NuGet/setup-nuget@v1.1.1
+    - name: Add msbuild to PATH
+      uses: microsoft/setup-msbuild@v1.1
     - name: Restore nuget packages
-      run: nuget restore src/caliburn.micro.sln
+      run:  msbuild src\caliburn.micro.sln -t:restore
 
+    - name: Build app for release
+      run: msbuild src\caliburn.micro.sln -t:rebuild -verbosity:diag -property:Configuration=Release
 
-
-    - name: Build
-      run: dotnet src/caliburn.micro.sln build --configuration Release --no-restore
     # ℹ️ Command-line programs to run using the OS shell.
     # 📚 https://git.io/JvXDl
 
