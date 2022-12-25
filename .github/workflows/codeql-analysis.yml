@@ -52,7 +52,7 @@ jobs:
       uses: microsoft/setup-msbuild@v1.1
       
     - name: search workloads
-      run: dotnet workload search
+      run: dotnet workload search maui
     - name: restore workloads
       run: dotnet workload restore src/caliburn.micro.sln  --add-source https://api.nuget.org/v3/index.json
     - name: list workloads
