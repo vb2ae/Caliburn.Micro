@@ -39,7 +39,7 @@ jobs:
     - name: Setup .NET
       uses: actions/setup-dotnet@v1
       with:
-        global-json-file: "./global.json" # contains version 2.2.207
+        config-file: "./global.json" 
 
       
     - name: Setup Java SDK
