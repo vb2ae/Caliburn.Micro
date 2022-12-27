@@ -30,8 +30,8 @@ jobs:
     - name: Initialize CodeQL
       uses: github/codeql-action/init@v2
       # Override language selection by uncommenting this and choosing your languages
-      # with:
-      #   languages: go, javascript, csharp, python, cpp, java
+      with:
+        languages: csharp
 
     # Autobuild attempts to build any compiled languages  (C/C++, C#, or Java).
     # If this step fails, then you should remove it and run the build manually (see below)
@@ -39,7 +39,7 @@ jobs:
     - name: Setup .NET
       uses: actions/setup-dotnet@v3
       with:
-        dotnet-version: 6.0.400
+        global-json-file: csharp/global.json
       
     - name: Setup Java SDK
       uses: actions/setup-java@v1
