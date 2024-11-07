@@ -65,6 +65,7 @@ jobs:
     - name: Build app for release
       run: msbuild ${{env.caliburn_sln}} /t:Build /p:Configuration=${{env.build_configuration}}
 
+
     - name: Run Unit Tests
       run: dotnet test ${{env.caliburn_sln}} --configuration Release --no-build --verbosity normal  --collect:"XPlat Code Coverage" --results-directory ./coverage    
  
@@ -80,9 +81,6 @@ jobs:
         indicators: true
         output: both
         thresholds: '30 80'    
-          
-    - name: Restore nuget packages for tutorial
-      run:  msbuild ${{env.caliburn_tutorial}} -t:restore 
       
     - name: Build feature tutorial
       run: msbuild ${{env.caliburn_tutorial}} /t:Build /p:Configuration=${{env.build_configuration}}
