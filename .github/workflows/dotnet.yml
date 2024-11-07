@@ -67,7 +67,7 @@ jobs:
 
 
     - name: Run Unit Tests
-      run: dotnet test ${{env.caliburn_sln}} -p:CollectCoverage=true -p:CoverletOutput=TestResults/ -p:CoverletOutputFormat=opencover --no-build --verbosity normal Caliburn.Micro.Tests/  
+      run: dotnet test ${{env.caliburn_sln}} -p:CollectCoverage=true -p:CoverletOutput=TestResults/ -p:CoverletOutputFormat=opencover --no-build --verbosity normal   
  
     - name: Create Test Coverage Badge
       uses: simon-k/dotnet-code-coverage-badge@v1.0.0
