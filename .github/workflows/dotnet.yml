@@ -65,8 +65,8 @@ jobs:
     - name: Build app for release
       run: msbuild ${{env.caliburn_sln}} /t:Build /p:Configuration=${{env.build_configuration}}
 
-    - name: Test
-      run: dotnet test --configuration Release --no-build --verbosity normal --collect "Code coverage"'      
+    - name: Run Unit Tests
+      run: dotnet test --configuration Release --no-build --verbosity normal --collect "Code coverage"      
       
     - name: Restore nuget packages for tutorial
       run:  msbuild ${{env.caliburn_tutorial}} -t:restore 
