@@ -65,13 +65,8 @@ jobs:
     - name: Build app for release
       run: msbuild ${{env.caliburn_sln}} /t:Build /p:Configuration=${{env.build_configuration}}
 
-    - name: vstest-action
-      uses: microsoft/vstest-action@v1.0.0
-      with:
-        # Collect code coverage information from the test run
-        codeCoverageEnabled: true
-
-          
+    - name: Test
+      run: dotnet test --configuration Release --no-build --verbosity normal --collect "Code coverage"'      
       
     - name: Restore nuget packages for tutorial
       run:  msbuild ${{env.caliburn_tutorial}} -t:restore 
