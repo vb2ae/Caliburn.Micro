@@ -74,6 +74,12 @@ jobs:
     - name: Build feature tutorial
       run: msbuild ${{env.caliburn_tutorial}} /t:Build /p:Configuration=${{env.build_configuration}}
 
+    - name: Restore nuget packages for setup
+      run:  msbuild ${{env.caliburn_setup}} -t:restore 
+      
+    - name: Build feature setup
+      run: msbuild ${{env.caliburn_setup}} /t:Build /p:Configuration=${{env.build_configuration}}
+      
     - name: Restore nuget packages for features
       run:  msbuild ${{env.caliburn_features}} -t:restore 
       
