@@ -67,7 +67,7 @@ jobs:
 
 
     - name: Run Unit Tests
-      run: dotnet test ${{env.caliburn_sln}}  --configuration ${{env.build_configuration}} -p:CollectCoverage=true -p:CoverletOutput=Caliburn.Micro.Tests/TestResults/ -p:CoverletOutputFormat=opencover --no-build --verbosity normal   
+      run:  dotnet test src/caliburn.micro.sln  --configuration release -p:CollectCoverage=true -p:CoverletOutputFormat=json --no-build --verbosity normal /p:MergeWith=..\Caliburn.Micro.Core.Tests\coverage.json /m:1   
  
     - name: Create Test Coverage Badge
       uses: simon-k/dotnet-code-coverage-badge@v1.0.0
@@ -75,7 +75,7 @@ jobs:
       with:
         label: Unit Test Coverage
         color: brightgreen
-        path: Caliburn.Micro.Tests/TestResults/coverage.opencover.xml
+        path: Caliburn.Micro.Core.Tests/coverage.json
         gist-filename: caliburn-micro-code-coverage.json
         gist-id: 05708cb0180d790434ef8a4b5499beb7
         gist-auth-token: ${{ secrets.GIST_AUTH_TOKEN }}       
